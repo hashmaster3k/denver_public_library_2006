@@ -20,4 +20,12 @@ class Library
     end
   end
 
+  def publication_time_frame_for(author)
+    hash = Hash.new(0)
+
+    @books.find do |book|
+      require "pry"; binding.pry
+    end
+  end
+
 end
