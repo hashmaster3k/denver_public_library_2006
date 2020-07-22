@@ -18,4 +18,9 @@ class LibraryTest < Minitest::Test
     dpl = Library.new("Denver Public Library")
     assert_equal [], dpl.books
   end
+
+  def test_has_empty_authors
+    dpl = Library.new("Denver Public Library")
+    assert_equal [], dpl.authors
+  end
 end
