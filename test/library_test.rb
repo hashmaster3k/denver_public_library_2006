@@ -8,4 +8,9 @@ class LibraryTest < Minitest::Test
     dpl = Library.new("Denver Public Library")
     assert_instance_of Library, dpl
   end
+
+  def test_has_name
+    dpl = Library.new("Denver Public Library")
+    assert_equal "Denver Public Library", dpl.name
+  end
 end
