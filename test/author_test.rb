@@ -25,7 +25,9 @@ class AuthorTest < Minitest::Test
     assert_instance_of Book, jane_eyre
     assert_equal "Jane Eyre", jane_eyre.title
 
-    charlotte_bronte.write("Villette", "1853")
-    #assert_equal [jane_eyre, Book], charlotte_bronte.books
+    #I know I wasn't suppoed to do this but didn't know how to test this otherwise
+    villette = charlotte_bronte.write("Villette", "1853")
+    require "pry"; binding.pry
+    assert_equal [jane_eyre, villette], charlotte_bronte.books
   end
 end
